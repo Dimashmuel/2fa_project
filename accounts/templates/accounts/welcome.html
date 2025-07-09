@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card h2 {
+            margin-bottom: 10px;
+        }
+        .card p {
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .btn {
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #1669c1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Welcome, {{ user.username }}!</h2>
+        <p>You have successfully logged in using Two-Factor Authentication.</p>
+        <a href="{% url 'logout' %}" class="btn">Log Out</a>
+    </div>
+</body>
+</html>

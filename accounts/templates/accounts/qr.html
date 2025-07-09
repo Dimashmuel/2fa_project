@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two-Factor Authentication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9f9f9;
+        }
+        .card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        img {
+            margin: 20px 0;
+            width: 200px;
+            height: 200px;
+        }
+        .btn {
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #1669c1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Two-Factor Authentication</h2>
+        <p>Scan this QR code using your Authenticator app (e.g., Google Authenticator):</p>
+        <img src="{{ qr_data }}" alt="QR Code">
+        <p>Once scanned, use the app to generate your temporary login code.</p>
+        <a href="{% url 'login' %}" class="btn">Proceed to Login</a>
+    </div>
+</body>
+</html>
